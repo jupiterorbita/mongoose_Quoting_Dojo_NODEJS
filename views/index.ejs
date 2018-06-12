@@ -9,11 +9,19 @@
 <body>
     <h1>Quoting Dojo</h1>
     <hr>
-    <form action="" method="POST">
+
+    JSON.stringify(messages) => <%- JSON.stringify(messages) %> 
+    <% if(messages.registration) { %>
+         <% for (var x of messages.registration) { %>
+          <h3><%= x %></h3>
+         <% } %>
+     <% } %>
+
+    <form action="/quotes" method="POST">
         Your Name: <input type="text" name="name"><br>
-        Your Quote: <textarea name="quote"></textarea><br>
+        Your Quote: <textarea name="quote"></textarea><br><br>
         <input type="submit" value="add my quote!">
-    </form>
-        <a href=""><button>Skip to Quotes!</button></a>
+    </form><br>
+        <a href="/quotes"><button>Skip to Quotes!</button></a>
 </body>
 </html>

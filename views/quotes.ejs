@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>quotes!</title>
+</head>
+<body>
+    <h1>Here are the awesome Quotes!</h1>
+    <hr>
+    <% for (var idx in users){ %>
+        "<%= users[idx].quote %>"<br>
+        -<%= users[idx].name %> at <%= users[idx].createdAt %><br>
+        <br>
+    <% } %>
+    <hr>
+    <b><u>JSON.stringify(users) =></b></u><br>
+    <%= JSON.stringify(users) %>
+
+</body>
+</html>
