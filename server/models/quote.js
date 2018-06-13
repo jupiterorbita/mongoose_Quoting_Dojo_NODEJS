@@ -1,8 +1,11 @@
 // MODELS
+var mongoose = require("mongoose");
+// var User = mongoose.model("User");
+require("../config/mongoose.js");
 
 module.exports = function() {
-  var mongoose = require("mongoose");
-  mongoose.connect("mongodb://localhost/quoting_dojo");
+//   var mongoose = require("mongoose");
+//   mongoose.connect("mongodb://localhost/quoting_dojo");
 
   var UserSchema = new mongoose.Schema(
     {
