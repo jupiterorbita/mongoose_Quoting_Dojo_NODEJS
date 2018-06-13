@@ -22,19 +22,20 @@ app.use(session({
 const flash = require('express-flash');
 app.use(flash());
 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/quoting_dojo');
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/quoting_dojo');
 
-var UserSchema = new mongoose.Schema({
-    name:  { type: String, required: true, minlength: 3, maxlength: 10},
-    quote: { type: String, required: true, minlength: 5, maxlength: 150}
-},
-{timestamps: true});
+// var UserSchema = new mongoose.Schema({
+//     name:  { type: String, required: true, minlength: 3, maxlength: 10},
+//     quote: { type: String, required: true, minlength: 5, maxlength: 150}
+// },
+// {timestamps: true});
 
-mongoose.model('User', UserSchema);
-// var User = mongoose.model('User');
+// mongoose.model('User', UserSchema);
+// // var User = mongoose.model('User');
 
-mongoose.Promise = global.Promise;
+// mongoose.Promise = global.Promise;
+require('./server/models/quote.js')();
 
 require('./server/config/routes.js')(app);
 

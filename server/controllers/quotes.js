@@ -1,3 +1,4 @@
+// CONTROLLER
 var mongoose = require("mongoose");
 var User = mongoose.model("User");
 
@@ -15,6 +16,7 @@ module.exports = {
       name: req.body.name,
       quote: req.body.quote
     });
+    
 
     userInstance.save(function(err) {
       if (err) {
