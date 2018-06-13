@@ -1,9 +1,9 @@
 // var mongoose = require("mongoose");
 // var User = mongoose.model("User");
+var quotes = require("../controllers/quotes.js");
 
 module.exports = function(app) {
   //linking the quotes.js with all the logic form server/controllers
-  var quotes = require("../controllers/quotes.js");
 
   // ============= INDEX =====================
   app.get("/", function(req, res) {
